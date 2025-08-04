@@ -1,4 +1,8 @@
 numpy
 matplotlib
+mplfinance
 pandas
 scikit-learn
+sklearn
+yfinance
+statsmodels
