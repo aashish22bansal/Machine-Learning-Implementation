@@ -34,9 +34,9 @@ This will merge:
 | | Mathematical Foundations | Information theory – entropy | ☐ |
 | | Mathematical Foundations | Information theory – mutual information | ☐ |
 | **Beginner** | Programming for ML | Python basics | ☐ |
-| | Programming for ML | NumPy | ☐ |
-| | Programming for ML | Pandas | ☐ |
-| | Programming for ML | Matplotlib | ☐ |
+| | Programming for ML | NumPy | 📊 |
+| | Programming for ML | Pandas | 📊 |
+| | Programming for ML | Matplotlib | 📊 |
 | | Programming for ML | Data structures & algorithms basics | ☐ |
 | **Beginner** | Data Handling | Data collection | ☐ |
 | | Data Handling | Data cleaning | ☐ |
@@ -76,7 +76,7 @@ This will merge:
 | **Intermediate** | Advanced Supervised Learning | Decision Trees (CART) | ☐ |
 | | Advanced Supervised Learning | Decision Trees – entropy | ☐ |
 | | Advanced Supervised Learning | Decision Trees – Gini index | ☐ |
-| | Advanced Supervised Learning | Random Forests | ☐ |
+| | Advanced Supervised Learning | Random Forests | ✅ |
 | | Advanced Supervised Learning | Bagging | ☐ |
 | | Advanced Supervised Learning | Boosting | ☐ |
 | | Advanced Supervised Learning | Gradient Boosting Machines (GBM) | ☐ |
