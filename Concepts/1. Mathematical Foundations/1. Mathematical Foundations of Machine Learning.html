@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mathematical Foundations of Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --accent: #38bdf8;
+            --border: #1f2933;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, #020617, var(--bg));
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: var(--accent);
+        }
+
+        header p {
+            margin-top: 0.75rem;
+            color: var(--muted);
+            max-width: 900px;
+            margin-inline: auto;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.6rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .insight {
+            margin-top: 1rem;
+            padding: 0.9rem 1rem;
+            border-left: 4px solid var(--accent);
+            background: #020617;
+            color: #c7d2fe;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background: #020617;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 2rem 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mathematical Foundations of Machine Learning</h1>
+    <p>
+        A structured, first-principles overview of the mathematics that power modern
+        machine learning algorithms.
+    </p>
+</header>
+
+<main>
+
+<section>
+    <h2>1. Linear Algebra — The Language of ML</h2>
+    <ul>
+        <li>Vectors and vector spaces</li>
+        <li>Matrices and matrix multiplication</li>
+        <li>Dot product and projections</li>
+        <li>Eigenvalues and eigenvectors</li>
+        <li>Singular Value Decomposition (SVD)</li>
+        <li>Principal Component Analysis (PCA)</li>
+    </ul>
+    <div class="insight">
+        ML models mostly learn optimal linear transformations of data.
+    </div>
+</section>
+
+<section>
+    <h2>2. Probability Theory — Modeling Uncertainty</h2>
+    <ul>
+        <li>Random variables (discrete & continuous)</li>
+        <li>Probability distributions (Bernoulli, Gaussian, Poisson)</li>
+        <li>Expectation and variance</li>
+        <li>Conditional probability</li>
+        <li>Bayes’ Theorem</li>
+    </ul>
+    <div class="insight">
+        Learning is estimating parameters that maximize probability.
+    </div>
+</section>
+
+<section>
+    <h2>3. Statistics — Learning from Data</h2>
+    <ul>
+        <li>Descriptive vs inferential statistics</li>
+        <li>Sampling and estimators</li>
+        <li>Bias–variance tradeoff</li>
+        <li>Hypothesis testing</li>
+        <li>Confidence intervals</li>
+        <li>Maximum Likelihood Estimation (MLE)</li>
+    </ul>
+    <div class="insight">
+        Good ML is statistically valid ML.
+    </div>
+</section>
+
+<section>
+    <h2>4. Calculus — How Models Learn</h2>
+    <ul>
+        <li>Derivatives and gradients</li>
+        <li>Partial derivatives</li>
+        <li>Chain rule</li>
+        <li>Jacobian and Hessian matrices</li>
+        <li>Convex vs non-convex functions</li>
+    </ul>
+    <div class="insight">
+        Training a model is controlled gradient-based optimization.
+    </div>
+</section>
+
+<section>
+    <h2>5. Optimization Theory — Finding the Best Model</h2>
+    <ul>
+        <li>Convex optimization</li>
+        <li>Local vs global minima</li>
+        <li>Gradient Descent, SGD, Adam</li>
+        <li>Lagrange multipliers</li>
+        <li>Regularization (L1, L2)</li>
+    </ul>
+    <div class="insight">
+        Better optimization yields faster, more stable learning.
+    </div>
+</section>
+
+<section>
+    <h2>6. Information Theory — Measuring Learning Quality</h2>
+    <ul>
+        <li>Entropy</li>
+        <li>Cross-entropy loss</li>
+        <li>Kullback–Leibler divergence</li>
+        <li>Mutual information</li>
+    </ul>
+    <div class="insight">
+        Learning reduces uncertainty in predictions.
+    </div>
+</section>
+
+<section>
+    <h2>7. Geometry & High-Dimensional Intuition</h2>
+    <ul>
+        <li>Distance metrics</li>
+        <li>Cosine similarity</li>
+        <li>Manifold hypothesis</li>
+        <li>Embedding spaces</li>
+    </ul>
+    <div class="insight">
+        High-dimensional data often lies on lower-dimensional manifolds.
+    </div>
+</section>
+
+<section>
+    <h2>Math → Algorithm Mapping</h2>
+    <table>
+        <tr>
+            <th>Mathematics</th>
+            <th>Machine Learning Usage</th>
+        </tr>
+        <tr>
+            <td>Linear Algebra</td>
+            <td>Linear Regression, PCA, Neural Networks</td>
+        </tr>
+        <tr>
+            <td>Probability</td>
+            <td>Naive Bayes, Bayesian Models</td>
+        </tr>
+        <tr>
+            <td>Statistics</td>
+            <td>Model evaluation, bias-variance analysis</td>
+        </tr>
+        <tr>
+            <td>Calculus</td>
+            <td>Gradient Descent, Backpropagation</td>
+        </tr>
+        <tr>
+            <td>Optimization</td>
+            <td>SVMs, Deep Learning</td>
+        </tr>
+        <tr>
+            <td>Information Theory</td>
+            <td>Decision Trees, Classification Loss</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Recommended Learning Order</h2>
+    <ol>
+        <li>Linear Algebra</li>
+        <li>Probability & Statistics</li>
+        <li>Multivariable Calculus</li>
+        <li>Optimization Theory</li>
+        <li>Information Theory (selective)</li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+    Mathematical Foundations of Machine Learning • Designed for deep understanding
+</footer>
+
+</body>
+</html>

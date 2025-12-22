@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vectors in Linear Algebra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #38bdf8;
+        --border: #1f2933;
+        --highlight: #020617;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      header {
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, #020617, var(--bg));
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.4rem;
+        color: var(--accent);
+      }
+
+      header p {
+        margin-top: 0.75rem;
+        color: var(--muted);
+        max-width: 900px;
+        margin-inline: auto;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.75rem;
+        margin-bottom: 2rem;
+      }
+
+      section h2 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.6rem;
+      }
+
+      ul {
+        padding-left: 1.25rem;
+      }
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+
+      .formula {
+        background: var(--highlight);
+        padding: 0.9rem 1rem;
+        border-radius: 10px;
+        font-family: "Courier New", monospace;
+        margin: 1rem 0;
+        overflow-x: auto;
+      }
+
+      .insight {
+        margin-top: 1rem;
+        padding: 0.9rem 1rem;
+        border-left: 4px solid var(--accent);
+        background: #020617;
+        color: #c7d2fe;
+        border-radius: 8px;
+        font-style: italic;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      th {
+        background: #020617;
+        color: var(--accent);
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 2rem 1rem;
+        border-top: 1px solid var(--border);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vectors in Linear Algebra</h1>
+      <p>
+        A clear, machine-learning-oriented explanation of vectors — the atomic
+        unit of data and computation.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>1. What Is a Vector?</h2>
+        <p>
+          A vector is a mathematical object that has both
+          <strong>magnitude</strong> and <strong>direction</strong>. In linear
+          algebra, it is represented as an ordered list of numbers.
+        </p>
+
+        <div class="formula">v = [ v₁, v₂, v₃, ..., vₙ ]</div>
+
+        <p>Each value is called a <strong>component</strong> of the vector.</p>
+
+        <div class="insight">
+          In machine learning, every data point is ultimately represented as a
+          vector.
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Vectors as Data (Machine Learning View)</h2>
+        <ul>
+          <li>A person → [age, height, weight, income]</li>
+          <li>An image → [pixel₁, pixel₂, ..., pixelₙ]</li>
+          <li>A word embedding → [0.21, -0.03, 0.87, ...]</li>
+          <li>Model weights → parameter vector</li>
+        </ul>
+
+        <div class="insight">
+          ML models learn by transforming vectors into better vectors.
+        </div>
+      </section>
+
+      <section>
+        <h2>3. Geometric Interpretation</h2>
+        <p>
+          In 2D or 3D, vectors can be visualized as arrows starting at the
+          origin and pointing to a coordinate.
+        </p>
+
+        <div class="formula">v = (x, y) or v = (x, y, z)</div>
+
+        <p>
+          This geometric interpretation helps us understand similarity,
+          distance, and projections.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Vector Magnitude (Length)</h2>
+        <p>The magnitude (or length) of a vector tells us how large it is.</p>
+
+        <div class="formula">||v|| = √(v₁² + v₂² + ... + vₙ²)</div>
+
+        <p>Example:</p>
+
+        <div class="formula">v = (3, 4) → ||v|| = 5</div>
+
+        <div class="insight">
+          In ML, magnitude affects distance, regularization, and gradient
+          strength.
+        </div>
+      </section>
+
+      <section>
+        <h2>5. Unit Vectors and Normalization</h2>
+        <p>
+          A unit vector has a magnitude of exactly 1. It keeps direction but
+          removes scale.
+        </p>
+
+        <div class="formula">v̂ = v / ||v||</div>
+
+        <ul>
+          <li>Makes vectors comparable</li>
+          <li>Improves numerical stability</li>
+          <li>Used in cosine similarity and embeddings</li>
+        </ul>
+
+        <div class="insight">
+          Normalization preserves meaning while removing scale bias.
+        </div>
+      </section>
+
+      <section>
+        <h2>6. Vector Addition and Subtraction</h2>
+        <p>Vector addition combines directions component-wise.</p>
+
+        <div class="formula">a + b = (a₁ + b₁, a₂ + b₂, ...)</div>
+
+        <p>Subtraction represents movement from one point to another.</p>
+
+        <div class="insight">Gradient updates in ML are vector additions.</div>
+      </section>
+
+      <section>
+        <h2>7. Scalar Multiplication</h2>
+        <p>Multiplying a vector by a scalar stretches or shrinks it.</p>
+
+        <div class="formula">c · v = (c·v₁, c·v₂, ...)</div>
+
+        <ul>
+          <li>c &gt; 1 → stretches</li>
+          <li>0 &lt; c &lt; 1 → shrinks</li>
+          <li>c &lt; 0 → reverses direction</li>
+        </ul>
+
+        <div class="insight">
+          Learning rate × gradient is scalar multiplication.
+        </div>
+      </section>
+
+      <section>
+        <h2>8. Dot Product (Most Important)</h2>
+        <p>The dot product measures similarity and projection.</p>
+
+        <div class="formula">a · b = a₁b₁ + a₂b₂ + ... + aₙbₙ</div>
+
+        <div class="formula">a · b = ||a|| ||b|| cos(θ)</div>
+
+        <ul>
+          <li>Positive → similar direction</li>
+          <li>Zero → perpendicular</li>
+          <li>Negative → opposite direction</li>
+        </ul>
+
+        <div class="insight">Every neuron computes a dot product.</div>
+      </section>
+
+      <section>
+        <h2>9. Vectors in Machine Learning</h2>
+        <table>
+          <tr>
+            <th>ML Concept</th>
+            <th>Vector Role</th>
+          </tr>
+          <tr>
+            <td>Dataset row</td>
+            <td>Feature vector</td>
+          </tr>
+          <tr>
+            <td>Model parameters</td>
+            <td>Weight vector</td>
+          </tr>
+          <tr>
+            <td>Prediction</td>
+            <td>Dot product</td>
+          </tr>
+          <tr>
+            <td>Training</td>
+            <td>Vector updates</td>
+          </tr>
+          <tr>
+            <td>Embeddings</td>
+            <td>Semantic vectors</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>10. Key Takeaway</h2>
+        <div class="insight">
+          A vector is a container of meaning and direction. Machine learning is
+          the science of transforming vectors intelligently.
+        </div>
+      </section>
+    </main>
+
+    <footer>Vectors in Linear Algebra • Machine Learning Foundations</footer>
+  </body>
+</html>
