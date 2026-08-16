@@ -46,81 +46,135 @@ project:
     - '**/.ipynb_checkpoints/**'
     - README.md
 
+  # Every entry carries an explicit `title`. Without one MyST falls back to each
+  # notebook's FIRST heading, which produced sidebar entries like "Import Libraries"
+  # for the k-means page.
   toc:
     - file: index.md
+      title: Home
 
     - title: Understanding Data
       children:
         - file: Understanding Data/Understanding Data.ipynb
+          title: Understanding Data
 
     - title: Data Analysis and Statistics
       children:
         - title: Descriptive Statistics
           children:
             - file: Data Analysis and Statistics/Descriptive Statistics/Descriptive Statistics.ipynb
+              title: Overview
             - file: Data Analysis and Statistics/Descriptive Statistics/Count/Count.ipynb
+              title: Count
             - file: Data Analysis and Statistics/Descriptive Statistics/Percentage/Percentage.ipynb
+              title: Percentage
             - file: Data Analysis and Statistics/Descriptive Statistics/Percentile/Percentile.ipynb
+              title: Percentile
             - file: Data Analysis and Statistics/Descriptive Statistics/Measures of Frequency/Measures of Frequency.ipynb
+              title: Measures of Frequency
             - file: Data Analysis and Statistics/Descriptive Statistics/Measures of Frequency/Size of the Dataset.ipynb
+              title: Size of the Dataset
         - title: Fundamentals of Statistics
           children:
             - file: Data Analysis and Statistics/Fundamentals of Statistics/Pearson Correlation Coefficient.ipynb
+              title: Pearson Correlation Coefficient
             - file: Data Analysis and Statistics/Fundamentals of Statistics/Standardized Level.ipynb
+              title: Standardized Values (Z-Scores)
             - file: Data Analysis and Statistics/Fundamentals of Statistics/Confidence Level Value.ipynb
+              title: Confidence Levels
             - file: Data Analysis and Statistics/Fundamentals of Statistics/Critical Value for a Confidence Interval Level.ipynb
+              title: Critical Values
         - title: Inferential Statistics
           children:
             - file: Data Analysis and Statistics/Inferential Statistics/Hypothesis Testing/Hypothesis Testing - Significance and critical values.ipynb
+              title: Significance and Critical Values
             - file: Data Analysis and Statistics/Inferential Statistics/Hypothesis Testing/Critical Regions in Visualising Significance Level (Alpha).ipynb
+              title: Critical Regions and Alpha
 
     - title: Data Visualization
       children:
         - file: Data Visualization/Using matplotlib in the Jupyter Notebook.ipynb
+          title: Using matplotlib in Jupyter
         - file: Data Visualization/Making basic plots - Lines, bars, pies, and scatterplots.ipynb
+          title: Lines, Bars, Pies and Scatterplots
         - file: Data Visualization/Plotting distributions - Histograms and box plots.ipynb
+          title: Histograms and Box Plots
         - file: Data Visualization/Subplots and small multiples.ipynb
+          title: Subplots and Small Multiples
         - file: Data Visualization/matplotlib styles.ipynb
+          title: matplotlib Styles
         - title: Exercises
           children:
             - file: Data Visualization/exercises/Exercises - Using matplotlib in the Jupyter Notebook.ipynb
+              title: Using matplotlib in Jupyter
             - file: Data Visualization/exercises/Exercises - Making basic plots.ipynb
+              title: Making Basic Plots
             - file: Data Visualization/exercises/Exercises - Plotting distributions.ipynb
+              title: Plotting Distributions
             - file: Data Visualization/exercises/Exercises - Subplots and small multiples.ipynb
+              title: Subplots and Small Multiples
             - file: Data Visualization/exercises/Exercises - matplotlib styles.ipynb
+              title: matplotlib Styles
 
     - title: Supervised Learning
       children:
         - file: Classification and Regression using Supervised Learning/data_preprocessor.ipynb
+          title: Data Preprocessing
         - file: Classification and Regression using Supervised Learning/label_encoder.ipynb
+          title: Label Encoding
         - file: Classification and Regression using Supervised Learning/regressor_singlevar.ipynb
+          title: Linear Regression (Single Variable)
         - file: Classification and Regression using Supervised Learning/regressor_multivar.ipynb
+          title: Linear Regression (Multivariable)
         - file: Classification and Regression using Supervised Learning/house_prices.ipynb
+          title: Predicting House Prices
         - file: Classification and Regression using Supervised Learning/logistic_regression.ipynb
+          title: Logistic Regression
         - file: Classification and Regression using Supervised Learning/naive_bayes.ipynb
+          title: Naive Bayes
         - file: Classification and Regression using Supervised Learning/confusion_matrix.ipynb
+          title: Confusion Matrix
         - file: Classification and Regression using Supervised Learning/income_classifier.ipynb
+          title: Income Classification
 
     - title: Unsupervised Learning
       children:
         - file: Detecting Patterns with Unsupervised Learning/kmeans.ipynb
+          title: K-Means Clustering
         - file: Detecting Patterns with Unsupervised Learning/mean_shift.ipynb
+          title: Mean Shift
         - file: Detecting Patterns with Unsupervised Learning/clustering_quality.ipynb
+          title: Clustering Quality (Silhouette Scores)
         - file: Detecting Patterns with Unsupervised Learning/gmm_classifier.ipynb
+          title: Gaussian Mixture Models
         - file: Detecting Patterns with Unsupervised Learning/market_segmentation.ipynb
+          title: Market Segmentation
         - file: Detecting Patterns with Unsupervised Learning/stocks.ipynb
+          title: Stock Market Subgroups
 
     - title: Ensemble Learning
       children:
         - file: Predictive Analytics with Ensemble Learning/decision_trees.ipynb
+          title: Decision Trees
         - file: Predictive Analytics with Ensemble Learning/random_forest.ipynb
+          title: Random Forests
         - file: Predictive Analytics with Ensemble Learning/feature_importance.ipynb
+          title: Feature Importance
         - file: Predictive Analytics with Ensemble Learning/class_imbalance.ipynb
+          title: Handling Class Imbalance
         - file: Predictive Analytics with Ensemble Learning/grid_search.ipynb
+          title: Grid Search
         - file: Predictive Analytics with Ensemble Learning/run_grid_search.ipynb
+          title: Running a Grid Search
         - file: Predictive Analytics with Ensemble Learning/traffic_prediction.ipynb
+          title: Traffic Prediction
 
 site:
   template: book-theme
+  title: Machine Learning Implementation
   options:
+    # Replaces the default "Made with MyST" wordmark in the top-left.
+    logo_text: Machine Learning Implementation
     folders: true
+    # Right-hand page outline; 2 levels keeps it readable on long notebooks.
+    outline_maxdepth: 2
