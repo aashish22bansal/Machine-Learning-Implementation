@@ -26,6 +26,19 @@ project:
       github: aashish22bansal
   github: https://github.com/aashish22bansal/Machine-Learning-Implementation
 
+  # Live compute. Adds an "Enable Compute" control to every page; readers connect to
+  # a Binder kernel built from THIS repo's requirements.txt, after which code cells
+  # re-run and the ipywidgets sliders actually drive their charts.
+  #
+  # Requires the repo to be public and `ref` to be a pushed branch -- Binder clones
+  # from GitHub, not from your working copy. Cold start is 1-5 minutes on first use.
+  jupyter:
+    binder:
+      repo: aashish22bansal/Machine-Learning-Implementation
+      ref: main
+      url: https://mybinder.org
+      provider: github
+
   # Third-party book content and notebook checkpoints must never be built.
   # Libraries/Resources holds the Scikit-Learn Cookbook (copyrighted, gitignored).
   exclude:

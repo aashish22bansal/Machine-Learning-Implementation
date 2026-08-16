@@ -1,4 +1,7 @@
-# Runtime dependencies for running the notebooks locally.
+# Runtime dependencies for running the notebooks.
+#
+# This file is ALSO the environment Binder builds for the website's live-compute
+# button, so it must cover every third-party import in the published notebooks.
 #
 # NOTE: the package is `scikit-learn`. The separate `sklearn` package on PyPI is a
 # deprecated shim that now hard-fails on install -- it used to be listed here and
@@ -7,6 +10,15 @@ numpy>=1.26
 pandas>=2.0
 matplotlib>=3.8
 scikit-learn>=1.4
+scipy>=1.11
 statsmodels>=0.14
+seaborn>=0.13
 mplfinance>=0.12
 yfinance>=0.2
+
+# Required by the interactive slider notebooks in Data Analysis and Statistics.
+# Without this the widgets cannot render or run.
+ipywidgets>=8.1
+
+# Binder needs a kernel in the image.
+ipykernel>=6.29
