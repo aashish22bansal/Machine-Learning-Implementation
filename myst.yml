@@ -1,0 +1,113 @@
+# Jupyter Book 2 / MyST configuration
+# Docs: https://mystmd.org/guide/frontmatter
+#
+# Build:   jupyter-book build --html
+# Preview: jupyter-book start
+#
+# Notebooks are rendered from their SAVED outputs (no execution at build time).
+# To execute instead, add --execute to the build command -- but read the note in
+# .github/workflows/deploy.yml first; it needs the full ML stack plus the CSVs.
+version: 1
+
+project:
+  id: ml-implementation-book
+  title: Machine Learning Implementation
+  description: >-
+    Machine learning and statistics worked through from first principles in
+    Jupyter notebooks -- derivations, implementations, and visualizations.
+  keywords:
+    - machine learning
+    - statistics
+    - data visualization
+    - scikit-learn
+    - python
+  authors:
+    - name: Aashish Bansal
+      github: aashish22bansal
+  github: https://github.com/aashish22bansal/Machine-Learning-Implementation
+
+  # Third-party book content and notebook checkpoints must never be built.
+  # Libraries/Resources holds the Scikit-Learn Cookbook (copyrighted, gitignored).
+  exclude:
+    - Libraries/**
+    - '**/.ipynb_checkpoints/**'
+    - README.md
+
+  toc:
+    - file: index.md
+
+    - title: Understanding Data
+      children:
+        - file: Understanding Data/Understanding Data.ipynb
+
+    - title: Data Analysis and Statistics
+      children:
+        - title: Descriptive Statistics
+          children:
+            - file: Data Analysis and Statistics/Descriptive Statistics/Descriptive Statistics.ipynb
+            - file: Data Analysis and Statistics/Descriptive Statistics/Count/Count.ipynb
+            - file: Data Analysis and Statistics/Descriptive Statistics/Percentage/Percentage.ipynb
+            - file: Data Analysis and Statistics/Descriptive Statistics/Percentile/Percentile.ipynb
+            - file: Data Analysis and Statistics/Descriptive Statistics/Measures of Frequency/Measures of Frequency.ipynb
+            - file: Data Analysis and Statistics/Descriptive Statistics/Measures of Frequency/Size of the Dataset.ipynb
+        - title: Fundamentals of Statistics
+          children:
+            - file: Data Analysis and Statistics/Fundamentals of Statistics/Pearson Correlation Coefficient.ipynb
+            - file: Data Analysis and Statistics/Fundamentals of Statistics/Standardized Level.ipynb
+            - file: Data Analysis and Statistics/Fundamentals of Statistics/Confidence Level Value.ipynb
+            - file: Data Analysis and Statistics/Fundamentals of Statistics/Critical Value for a Confidence Interval Level.ipynb
+        - title: Inferential Statistics
+          children:
+            - file: Data Analysis and Statistics/Inferential Statistics/Hypothesis Testing/Hypothesis Testing - Significance and critical values.ipynb
+            - file: Data Analysis and Statistics/Inferential Statistics/Hypothesis Testing/Critical Regions in Visualising Significance Level (Alpha).ipynb
+
+    - title: Data Visualization
+      children:
+        - file: Data Visualization/Using matplotlib in the Jupyter Notebook.ipynb
+        - file: Data Visualization/Making basic plots - Lines, bars, pies, and scatterplots.ipynb
+        - file: Data Visualization/Plotting distributions - Histograms and box plots.ipynb
+        - file: Data Visualization/Subplots and small multiples.ipynb
+        - file: Data Visualization/matplotlib styles.ipynb
+        - title: Exercises
+          children:
+            - file: Data Visualization/exercises/Exercises - Using matplotlib in the Jupyter Notebook.ipynb
+            - file: Data Visualization/exercises/Exercises - Making basic plots.ipynb
+            - file: Data Visualization/exercises/Exercises - Plotting distributions.ipynb
+            - file: Data Visualization/exercises/Exercises - Subplots and small multiples.ipynb
+            - file: Data Visualization/exercises/Exercises - matplotlib styles.ipynb
+
+    - title: Supervised Learning
+      children:
+        - file: Classification and Regression using Supervised Learning/data_preprocessor.ipynb
+        - file: Classification and Regression using Supervised Learning/label_encoder.ipynb
+        - file: Classification and Regression using Supervised Learning/regressor_singlevar.ipynb
+        - file: Classification and Regression using Supervised Learning/regressor_multivar.ipynb
+        - file: Classification and Regression using Supervised Learning/house_prices.ipynb
+        - file: Classification and Regression using Supervised Learning/logistic_regression.ipynb
+        - file: Classification and Regression using Supervised Learning/naive_bayes.ipynb
+        - file: Classification and Regression using Supervised Learning/confusion_matrix.ipynb
+        - file: Classification and Regression using Supervised Learning/income_classifier.ipynb
+
+    - title: Unsupervised Learning
+      children:
+        - file: Detecting Patterns with Unsupervised Learning/kmeans.ipynb
+        - file: Detecting Patterns with Unsupervised Learning/mean_shift.ipynb
+        - file: Detecting Patterns with Unsupervised Learning/clustering_quality.ipynb
+        - file: Detecting Patterns with Unsupervised Learning/gmm_classifier.ipynb
+        - file: Detecting Patterns with Unsupervised Learning/market_segmentation.ipynb
+        - file: Detecting Patterns with Unsupervised Learning/stocks.ipynb
+
+    - title: Ensemble Learning
+      children:
+        - file: Predictive Analytics with Ensemble Learning/decision_trees.ipynb
+        - file: Predictive Analytics with Ensemble Learning/random_forest.ipynb
+        - file: Predictive Analytics with Ensemble Learning/feature_importance.ipynb
+        - file: Predictive Analytics with Ensemble Learning/class_imbalance.ipynb
+        - file: Predictive Analytics with Ensemble Learning/grid_search.ipynb
+        - file: Predictive Analytics with Ensemble Learning/run_grid_search.ipynb
+        - file: Predictive Analytics with Ensemble Learning/traffic_prediction.ipynb
+
+site:
+  template: book-theme
+  options:
+    folders: true

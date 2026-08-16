@@ -1,1 +1,15 @@
+# Third-party book content (Scikit-Learn Cookbook) -- copyrighted, never publish
 Libraries/Resources/*
+
+# Jupyter Book / MyST build output
+_build/
+.myst/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

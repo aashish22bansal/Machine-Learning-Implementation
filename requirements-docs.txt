@@ -1,0 +1,6 @@
+# Dependencies for building the website only.
+#
+# The site renders notebooks from their saved outputs, so the ML stack in
+# requirements.txt is NOT needed to build. If you ever switch the build to
+# `--execute`, install both files.
+jupyter-book>=2.1

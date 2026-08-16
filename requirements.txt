@@ -1,8 +1,12 @@
-numpy
-matplotlib
-mplfinance
-pandas
-scikit-learn
-sklearn
-yfinance
-statsmodels
+# Runtime dependencies for running the notebooks locally.
+#
+# NOTE: the package is `scikit-learn`. The separate `sklearn` package on PyPI is a
+# deprecated shim that now hard-fails on install -- it used to be listed here and
+# would break any fresh `pip install -r requirements.txt`.
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+scikit-learn>=1.4
+statsmodels>=0.14
+mplfinance>=0.12
+yfinance>=0.2
