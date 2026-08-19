@@ -33,11 +33,7 @@ project:
   # Requires the repo to be public and `ref` to be a pushed branch -- Binder clones
   # from GitHub, not from your working copy. Cold start is 1-5 minutes on first use.
   jupyter:
-    binder:
-      repo: aashish22bansal/Machine-Learning-Implementation
-      ref: main
-      url: https://mybinder.org
-      provider: github
+    lite: true
 
   # Third-party book content and notebook checkpoints must never be built.
   # Libraries/Resources holds the Scikit-Learn Cookbook (copyrighted, gitignored).
@@ -52,6 +48,9 @@ project:
   toc:
     - file: index.md
       title: Home
+
+    - file: Interactive Charts Template.ipynb
+      title: Interactive Charts Template
 
     - title: Understanding Data
       children:

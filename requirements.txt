@@ -17,8 +17,14 @@ mplfinance>=0.12
 yfinance>=0.2
 
 # Required by the interactive slider notebooks in Data Analysis and Statistics.
-# Without this the widgets cannot render or run.
+# NOTE: ipywidgets output CANNOT render on a static site -- it needs a live kernel.
+# Prefer plotly (below) for anything that must stay interactive on the website.
 ipywidgets>=8.1
+
+# Kernel-free interactivity. Plotly figures embed as self-contained JSON in the
+# notebook output, so sliders/hover/zoom work on the published site with no server.
+# Preinstalled in Google Colab, so notebooks authored there need no extra setup.
+plotly>=5.20
 
 # Binder needs a kernel in the image.
 ipykernel>=6.29
